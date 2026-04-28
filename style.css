@@ -74,7 +74,7 @@ body{
     padding: 0 60px;
     background-color: var(--hitam);
     background-image: 
-        linear-gradient(to right, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.3)),
+        linear-gradient(to right, rgba(0,0,0,0.75) 30%, rgba(0,0,0,0.1)),
         url('image/jkt48.png');
     background-size: cover;
     background-position: center;
