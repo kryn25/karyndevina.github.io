@@ -9,6 +9,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 /* ====== VARIABEL WARNA ====== */
@@ -338,110 +339,6 @@ body {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ===== RESPONSIVE MOBILE ===== */
-@media (max-width: 768px) {
-
-  /* Navbar */
-  .navbar {
-    padding: 16px 24px;
-    width: 100%;
-  }
-
-  .hamburger {
-    display: flex !important;
-  }
-
-  .nav-links {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.98);
-    padding: 24px 40px;
-    gap: 24px;
-    border-bottom: 1px solid var(--abu);
-  }
-
-  .nav-links.open {
-    display: flex !important;
-  }
-
-  /* Hero */
-  .hero {
-    padding: 0 24px;
-  }
-
-  .hero-content h1 {
-    font-size: 36px;
-  }
-
-  .hero-content p {
-    font-size: 13px;
-  }
-
-  /* Berita */
-  .news-section {
-    padding: 40px 24px;
-  }
-
-  .news-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Footer */
-  .footer-grid {
-    grid-template-columns: 1fr;
-    padding: 40px 24px;
-    gap: 32px;
-  }
-
-  /* Halaman member */
-  .page-header {
-    padding: 24px 24px 16px;
-  }
-
-  .page-header h1 {
-    font-size: 28px;
-  }
-
-  .page-header p {
-    font-size: 12px;
-  }
-
-  .member-page {
-    padding: 24px 16px;
-  }
-
-  .member-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
-
-  /* Halaman profil member */
-  .profile-section {
-    flex-direction: column;
-    padding: 40px 24px;
-    gap: 32px;
-  }
-
-  .profile-img {
-    width: 100%;
-    aspect-ratio: 3 / 4;
-  }
-
-  .profile-name {
-    font-size: 32px;
-  }
-
-  .profile-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-}
-
 /* ===== MEMBER SECTION ===== */
 .member-section {
     padding: 80px 60px;
@@ -592,12 +489,6 @@ a, button {
     gap: 24px;
 }
 
-@media (max-width: 768px) {
-    .member-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 /* ===== PROFILE PAGE ===== */
 .profile-section {
     display: flex;
@@ -673,24 +564,32 @@ a, button {
     color: var(--putih);
 }
 
-@media (max-width: 768px) {
-    .profile-section {
-        flex-direction: column;
-        padding: 40px 24px;
-        gap: 40px;
-    }
-
-    .profile-img {
-        width: 100%;
-    }
-
-    .profile-name {
-        font-size: 36px;
-    }
-}
-
 .member-link {
     text-decoration: none;
     color: inherit;
     display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar { padding: 16px 24px; width: 100%; }
+  .hamburger { display: flex !important; }
+  .nav-links { display: none !important; position: absolute; top: 100%; left: 0; width: 100%; flex-direction: column; background-color: rgba(0,0,0,0.98); padding: 24px 40px; gap: 24px; }
+  .nav-links.open { display: flex !important; }
+  .hero { padding: 0 24px; }
+  .hero-content h1 { font-size: 36px; }
+  .hero-content p { font-size: 13px; }
+  .news-section { padding: 40px 24px; }
+  .news-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; padding: 40px 24px; gap: 32px; }
+  .footer-bottom { padding: 20px 24px; }
+  .page-header { padding: 24px 24px 16px; }
+  .page-header h1 { font-size: 28px; }
+  .page-header p { font-size: 12px; }
+  .member-page { padding: 24px 16px; }
+  .member-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .profile-section { flex-direction: column; padding: 40px 24px; gap: 32px; }
+  .profile-img-wrap { width: 100%; }
+  .profile-img { width: 100%; aspect-ratio: 3 / 4; }
+  .profile-name { font-size: 32px; }
+  .profile-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; }
 }
