@@ -75,7 +75,7 @@ body{
     background-color: var(--hitam);
     background-image: 
         linear-gradient(to right, rgba(0,0,0,0.95) 40%, rgba(0,0,0,0.3)),
-        url('https://picsum.photos/1600/900?grayscale');
+        url('image/jkt48.png');
     background-size: cover;
     background-position: center;
     border-bottom: 1px solid var(--abu);
@@ -399,9 +399,8 @@ body{
 }
 
 .member-img {
-    height: 280px;
+    height: 320px;
     background-color: var(--abu);
-    background-image: url('https://picsum.photos/220/280?random');
     background-size: cover;
     background-position: center;
     filter: grayscale(30%);
@@ -482,4 +481,43 @@ a, button {
 .loader.hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+    padding: 80px 60px 40px;
+    background-color: var(--hitam);
+    border-bottom: 1px solid var(--abu);
+}
+
+.page-header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: var(--teks-redup);
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ===== MEMBER PAGE GRID ===== */
+.member-page {
+    padding: 60px;
+    background-color: var(--hitam);
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

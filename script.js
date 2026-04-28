@@ -40,13 +40,15 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const cardWidth = 240;
 
-prevBtn.addEventListener('click', function() {
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', function() {
     track.scrollBy({left: -cardWidth, behavior: 'smooth'});
-});
+  });
 
-nextBtn.addEventListener('click', function() {
+  nextBtn.addEventListener('click', function() {
     track.scrollBy({left: cardWidth, behavior: 'smooth'});
-});
+  });
+}
 
 // Active link saat scroll
 const sections = document.querySelectorAll('section[id]');
