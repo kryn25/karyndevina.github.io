@@ -180,8 +180,8 @@ body{
 .news-img {
     height: 200px;
     background-color: #333;
-    background-image: url('https://picsum.photos/600/400?random');
     background-size: cover;
+    background-position: center;
 }
 
 .news-body {
