@@ -399,10 +399,10 @@ body{
 }
 
 .member-img {
-    height: 320px;
+    aspect-ratio: 3 / 4;
     background-color: var(--abu);
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     filter: grayscale(30%);
     transition: filter 0.3s;
 }
@@ -520,4 +520,101 @@ a, button {
     .member-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* ===== PROFILE PAGE ===== */
+.profile-section {
+    display: flex;
+    gap: 80px;
+    padding: 80px 60px;
+    background-color: var(--hitam);
+    min-height: 100vh;
+    align-items: center;
+}
+
+.profile-img-wrap {
+    flex-shrink: 0;
+}
+
+.profile-img {
+    width: 340px;
+    aspect-ratio: 3 / 4;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(20%);
+}
+
+.profile-team {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--merah);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.profile-name {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+}
+
+.profile-nickname {
+    font-size: 16px;
+    color: var(--teks-redup);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 48px;
+}
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 48px;
+    border-top: 1px solid var(--abu);
+    padding-top: 32px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--teks-redup);
+}
+
+.stat-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--putih);
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 40px;
+    }
+
+    .profile-img {
+        width: 100%;
+    }
+
+    .profile-name {
+        font-size: 36px;
+    }
+}
+
+.member-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
