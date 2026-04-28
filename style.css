@@ -339,6 +339,9 @@ body{
   /* Navbar */
   .navbar {
     padding: 16px 24px;
+    width: 100%;
+    left: 0;
+    right: 0;
   }
 
   /* Hero */
