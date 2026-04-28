@@ -340,12 +340,32 @@ body {
 
 /* ===== RESPONSIVE MOBILE ===== */
 @media (max-width: 768px) {
+
   /* Navbar */
   .navbar {
     padding: 16px 24px;
     width: 100%;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+
+  .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 100%;
     left: 0;
-    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.98);
+    padding: 24px 40px;
+    gap: 24px;
+    border-bottom: 1px solid var(--abu);
+  }
+
+  .nav-links.open {
+    display: flex !important;
   }
 
   /* Hero */
@@ -354,7 +374,11 @@ body {
   }
 
   .hero-content h1 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
   }
 
   /* Berita */
@@ -374,43 +398,12 @@ body {
   }
 
   /* Halaman member */
-  .member-page {
-    padding: 40px 24px;
-  }
-
-  .member-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /* Halaman profil */
-  .profile-section {
-    flex-direction: column;
-    padding: 40px 24px;
-    gap: 32px;
-  }
-
-  .profile-img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-}
-
-  .profile-name {
-    font-size: 36px;
-  }
-
-  .profile-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  /* Page header */
   .page-header {
     padding: 24px 24px 16px;
   }
 
   .page-header h1 {
     font-size: 28px;
-    margin-bottom: 4px;
   }
 
   .page-header p {
@@ -425,6 +418,28 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
+  /* Halaman profil member */
+  .profile-section {
+    flex-direction: column;
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  .profile-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  .profile-name {
+    font-size: 32px;
+  }
+
+  .profile-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
 }
 
 /* ===== MEMBER SECTION ===== */
