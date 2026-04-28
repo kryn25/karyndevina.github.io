@@ -398,11 +398,25 @@ body{
 
   /* Page header */
   .page-header {
-    padding: 40px 24px 24px;
+    padding: 24px 24px 16px;
   }
 
   .page-header h1 {
-    font-size: 36px;
+    font-size: 28px;
+    margin-bottom: 4px;
+  }
+
+  .page-header p {
+    font-size: 12px;
+  }
+
+  .member-page {
+    padding: 24px 16px;
+  }
+
+  .member-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
