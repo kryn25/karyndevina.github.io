@@ -383,8 +383,9 @@ body{
   }
 
   .profile-img {
-    width: 100%;
-  }
+  width: 100%;
+  aspect-ratio: 3 / 4;
+}
 
   .profile-name {
     font-size: 36px;
