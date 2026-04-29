@@ -28,7 +28,6 @@ body {
   background-color: var(--hitam);
   color: var(--putih);
   line-height: 1.6;
-  cursor: crosshair;
   overflow-x: hidden;
 }
 
