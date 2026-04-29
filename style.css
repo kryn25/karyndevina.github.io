@@ -28,7 +28,7 @@ body {
   background-color: var(--hitam);
   color: var(--putih);
   line-height: 1.6;
-  cursor: pointer;
+  cursor: default;
   overflow-x: hidden;
 }
 
