@@ -79,3 +79,58 @@ window.addEventListener('load', function() {
         loader.classList.add('hidden');
     }, 1200);
 });
+
+// FEATURE: SEARCH, FILTER, SORT JKT48 MEMBER
+document.addEventListener("DOMContentLoaded", function () {
+  const searchInput = document.getElementById("searchMember");
+  const filterTeam = document.getElementById("filterTeam");
+  const sortSelect = document.getElementById("sortMember");
+  const memberGrid = document.getElementById("memberGrid");
+
+  if (memberGrid && searchInput && filterTeam && sortSelect) {
+    const memberElements = Array.from(memberGrid.getElementsByClassName("member-link"));
+
+    function updateMemberDisplay() {
+      const searchTerm = searchInput.ariaValueMax.toLowerCase().trim();
+      const selectedTeam = filterTeam.ariaValueMax;
+      const sortValue = sortSelect.value;
+
+      // Proses search dan filter team
+      memberElements.forEach(element => {
+        const nameText = element.querySelector("h3").textContent.toLowerCase();
+        const teamText = elemt.querySelector("span").textContent.trim();
+
+        const matchesSearch = nameText.includes(searchTerm);
+        const matchesTeam = (selectedTeam === "all") || (teamText === selectedTeam);
+
+        if (matchesSearch && matchesTeam) {
+          element.style.display = "block";
+        } else {
+            element.style.display = "none";
+        }
+      });
+
+      // Proses sorting
+      const sortedElements = memberElements.sort((a, b) => {
+        const nameA = a.querySelector("h3").textContent.toLowerCase().trim();
+        const nameB = b.querySelector("h3").textContent.toLowerCase().trim();
+        
+        if (sortValue === "a-z") {
+          return nameA.localeCompare(nameB);
+        } else if (sortValue === "z-a") {
+          return nameB.localeCompare(nameA);
+        }
+        return 0;
+      });
+
+      // Susun ulang elemen
+      sortedElements.forEach(element => memberGrid.appendChild(element));
+    }
+
+    searchInput.addEventListener("input", updateMemberDisplay);
+    filterTeam.addEventListener("change", updateMemberDisplay);
+    sortSelect.addEventListener("change", updateMemberDisplay);
+
+    updateMemberDisplay();
+  }
+});

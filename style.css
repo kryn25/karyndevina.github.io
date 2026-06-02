@@ -592,4 +592,83 @@ a, button {
   .profile-img { width: 100%; aspect-ratio: 3 / 4; }
   .profile-name { font-size: 32px; }
   .profile-stats { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+};
+
+/* STYLING CONTROLS HALAMAN MEMBER */
+.member-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 480px;
+}
+
+.search-box input {
+    width: 320px;
+    background-color: var(--abu-gelap);
+    color: var(--putih);
+    border: 1px solid var(--abu);
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box input::placeholder {
+    color: var(--teks-redup);
+}
+
+.filter-box {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-box select {
+    background-color: var(--abu-gelap);
+    color: var(--putih);
+    border: 1px solid var(--abu);
+    padding: 12px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+/* Efek saat search atau dropdown diklik */
+.search-box input:focus,
+.filter-box select:focus {
+    border-color: var(--merah);
+    box-shadow: 0 0 8px rgba(228, 0, 43, 0.2);
+}
+
+/* Menyesuaikan tampilan */
+.filter-box select option {
+    background-color: var(--abu-gelap);
+    color: var(--putih);
+}
+
+@media (max-width: 768px) {
+    .member-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .filter-box {
+        flex-direction: row;
+    }
+
+    .filter-box select {
+        flex: 1;
+        font-size: 13px;
+        padding: 10px;
+    }
 }
