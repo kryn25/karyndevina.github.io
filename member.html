@@ -31,24 +31,27 @@
     </nav>
 
     <!-- HEADER HALAMAN -->
-    <section class="page-header">
-        <h1>Our Members</h1>
-        <p>Kenali semua member JKT48</p>
-    </section>
+     <section class="member-page">
+        <div class="member-page-header">
+            <div class="header-title">
+                <h1>Our Members</h1>
+                <p>KENALI SEMUA MEMBER JKT48</p>
+            </div>
+        
 
     <!-- GRID SEMUA MEMBER -->
-    <section class="member-page">
-        <div class="member-controls">
-            <div class="search-box">
-                <input type="text" id="searchMember" placeholder="🔍 Cari nama member...">
-            </div>
-            <div class="filter-box">
-                <select id="filterTeam">
-                    <option value="all">Semua Member</option>
-                    <option value="Team Love">Team Love</option>
-                    <option value="Team Dream">Team Dream</option>
-                    <option value="Team Passion">Team Passion</option>
-                </select>
+    <div class="member-controls">
+        <div class="search-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchMember" placeholder="Cari nama member..."
+        </div>
+        <div class="filter-wrapper">
+            <select id="filterTeam">
+                <option value="all">Semua Member</option>
+                <option value="Team Love">Team Love</option>
+                <option value="Team Dream">Team Dream</option>
+                <option value="Team Passion">Team Passion</option>
+            </select>
 
                 <select id="sortMember">
                     <option value="a-z">Urutkan: A - Z</option>
@@ -56,6 +59,7 @@
                 </select>
             </div>
         </div>
+        
         <div class="member-grid" id="memberGrid">
             <a href="dream/adeline.html" class="member-link">
             <div class="member-card">
