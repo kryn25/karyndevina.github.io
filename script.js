@@ -91,29 +91,32 @@ document.addEventListener("DOMContentLoaded", function () {
     const memberElements = Array.from(memberGrid.getElementsByClassName("member-link"));
 
     function updateMemberDisplay() {
-      const searchTerm = searchInput.ariaValueMax.toLowerCase().trim();
-      const selectedTeam = filterTeam.ariaValueMax;
+      const searchTerm = searchInput.value.toLowerCase().trim();
+      const selectedTeam = filterTeam.value;
       const sortValue = sortSelect.value;
 
-      // Proses search dan filter team
       memberElements.forEach(element => {
-        const nameText = element.querySelector("h3").textContent.toLowerCase();
-        const teamText = elemt.querySelector("span").textContent.trim();
+        const h3 = element.querySelector("h3");
+        const span = element.querySelector("span");
 
-        const matchesSearch = nameText.includes(searchTerm);
-        const matchesTeam = (selectedTeam === "all") || (teamText === selectedTeam);
+        if (h3 && span) {
+          const nameText = h3.textContent.toLowerCase();
+          const teamText = span.textContent.trim();
 
-        if (matchesSearch && matchesTeam) {
-          element.style.display = "block";
-        } else {
+          const matchesSearch = nameText.includes(searchTerm);
+          const matchesTeam = (selectedTeam === "all") || (teamText === selectedTeam);
+
+          if (matchesSearch && matchesTeam) {
+            element.style.display = "block";
+          } else {
             element.style.display = "none";
+          }
         }
       });
 
-      // Proses sorting
       const sortedElements = memberElements.sort((a, b) => {
-        const nameA = a.querySelector("h3").textContent.toLowerCase().trim();
-        const nameB = b.querySelector("h3").textContent.toLowerCase().trim();
+        const nameA = a.querySelector("h3") ? a.querySelector("h3").textContent.toLowerCase().trim() : "";
+        const nameB = b.querySelector("h3") ? b.querySelector("h3").textContent.toLowerCase().trim() : "";
         
         if (sortValue === "a-z") {
           return nameA.localeCompare(nameB);
@@ -123,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return 0;
       });
 
-      // Susun ulang elemen
       sortedElements.forEach(element => memberGrid.appendChild(element));
     }
 
