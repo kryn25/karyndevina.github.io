@@ -71,6 +71,250 @@ body {
     color: var(--merah);
 }
 
+/* ===== LOGIN BUTTON ====== */
+.login-btn {
+    padding: 10px 24px;
+    background-color: var(--merah);
+    color: var(--putih);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #ff5555;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 51, 51, 0.4);
+}
+
+/* ====== LOGIN MODAL (Background) ====== */
+.login-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Saat Dibuka */
+.login-modal.active {
+    display: flex;
+}
+
+/* ====== LOGIN BOX (Kotak Form) ====== */
+.login-box {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    position: relative; 
+    border: 1px solid #333;
+}
+
+.login-box h2 {
+    color: var(--putih);
+    margin: 0 0 18px 0;
+    font-size: 2rem;
+}
+
+.login-box p {
+    color: #888;
+    margin: 0 0 30px 0;
+    font-size: 0.9rem;
+}
+
+/* ====== CLOSE BUTTON ====== */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    left: auto;
+    color: #888;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: var(--merah);
+}
+
+/* ====== FORM INPUT ====== */
+.login-form input {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--putih);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--merah);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 14px;
+    background: var(--merah);
+    border: none;
+    border-radius: 8px;
+    color: var(--putih);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.login-form button:hover {
+    background: #ff5555;
+}
+
+/* ====== LINKS BAWAH FORM ====== */
+.login-links {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-links a {
+    color: #888;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.login-links a:hover {
+    color: var(--merah);
+}
+
+/* ====== SIGN UP MODAL ====== */
+.signup-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-modal.active {
+    display: flex;
+}
+
+.signup-box {
+    background: #1A1A1A;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    border: 1px solid #333;
+}
+
+.signup-box h2 {
+    color: var(--putih);
+    margin: 0 0 18px 0;
+    font-size: 2rem;
+}
+
+.signup-box p {
+    color: #888;
+    margin: 0 0 30px 0;
+    font-size: 0.9rem;
+}
+
+.close-signup-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    left: auto;
+    color: #888;
+    font-size: 28px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-signup-btn:hover {
+    color: var(--merah);
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 15px;
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: var(--putih);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+.signup-form input:focus {
+    outline: none;
+    border-color: var(--merah);
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 14px;
+    background: var(--merah);
+    border: none;
+    border-radius: 8px;
+    color: var(--putih);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.singup-form button:hover {
+    background: #ff5555;
+}
+
+.signup-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.signup-links p {
+    color: #888;
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.signup-links a {
+    color: var(--merah);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.signup-links a:hover {
+    text-decoration: underline;
+}
+
+
 /* ====== HERO ====== */
 .hero {
     min-height: 100vh;
@@ -749,4 +993,55 @@ a, button {
     #filterTeam, #sortMember {
         flex: 1;
     }
+}
+
+/* CUSTOM NOTIFICATION */
+.notification {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: #1A1A1A;
+    border: 1px solid #333;
+    border-left: 4px solid var(--merah);
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 2000;
+    opacity: 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.notification.success {
+    border-left-color: #22c55e;
+}
+
+.notification.error {
+    border-left-color: #ef4444;
+}
+
+.notif-icon {
+    font-size: 20px;
+}
+
+.notification.success .notif-icon {
+    color: #22c55e;
+}
+
+.notification.error .notif-icon {
+    color: #ef4444;
+}
+
+.notif-message {
+    color: var(--putih);
+    font-size: 0.95rem;
+    font-weight: 500;
 }

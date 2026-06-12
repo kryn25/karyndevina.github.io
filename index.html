@@ -23,6 +23,8 @@
             <li><a href="#berita">Berita</a></li>
             <li><a href="#">Tiket</a></li>
         </ul>
+        
+        <a href="#" class="login-btn" id="loginBtn">Login</a>
         <button class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -94,6 +96,53 @@
             <p>© 2026 JKT48 Fan Site • Dibuat oleh Karyn Devina 🎶</p>
         </div>
     </footer>
+
+/* ====== LOGIN MODAL ====== */
+<div class="login-modal" id="loginModal">
+    <div class="login-box">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <h2>Login</h2>
+        <p>Masuk ke akun JKT48 kamu</p>
+
+        <form class="login-form">
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Masuk</button>
+        </form>
+
+        <div class="login-links">
+            <a href="#">Lupa Password?</a>
+            <a herf="#" id="toSignupFromLogin">Belum punya akun? Daftar</a>
+        </div>
+    </div>
+</div>
+
+/* ====== LOGIN MODAL ====== */
+<div class="signup-modal" id="signupModal">
+    <div class="signup-box">
+        <span class="close-signup-btn" id="closeSignupBtn">&times;</span>
+        <h2>Daftar</h2>
+        <p>Buat akun JKT48 baru</p>
+
+        <form class="signup-form">
+            <input type="text" id="signupUsername" placeholder="Username" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+            <input type="password" id="signupPassword" placeholder="Password" required>
+            <input type="password" id="signupConfirmPassword" placeholder="Konfirmasi Password" required>
+            <button type="submit">Daftar</button>
+        </form>
+
+        <div class="signup-links">
+            <p>Sudah punya akun? <a href="#" id="toLoginLink">Login</a></p>
+        </div>
+    </div>
+</div>
+
+/* CUSTOM NOTIFIKASI */
+<div class="notification" id="notification">
+    <span class="notif-icon">✓</span>
+    <span class="notif-message" id="notifMessage">Berhasil!</span>
+</div>
 
      <script src="script.js"></script>
 </body>
